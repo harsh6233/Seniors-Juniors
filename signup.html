@@ -46,6 +46,15 @@
 </script>
 
 
+<!-----------------------------------------------------------------------------------Signup Css---------------------------------------------------------------------------------->
+
+<style>
+
+
+
+</style>
+
+
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
@@ -127,42 +136,54 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="top-text header-text">
-            <article>
-				<form action="">
-				 <label for="fname" style="color:#FFFFFF;">First Name</label><br />
-				<input type="text" id="fname" name="firstname" placeholder="Enter your first name"><br />
-				 <label for="lname" style="color:#FFFFFF;">Last Name</label><br />
-				<input type="text" id="lname" name="lastname" placeholder="Enter your last name"><br />
-
-
-				<label for="country" style="color:#FFFFFF;">Country</label><br />
-
-				<select id="country" name="country">
-				<option value="Australia" style="color:#FFFFFF;">Australia</option>
-				<option value="Canada" style="color:#FFFFFF;">Canada</option>
-				<option value="USA" style="color:#FFFFFF;">USA</option>
-				<option value="Insia" style="color:#FFFFFF;">india</option>
-				<option value="Bangladesh" style="color:#FFFFFF;">bangladesh</option>
-				</select><br />
-
-				<label for="email" style="color:#FFFFFF;">Email ID</label><br />
-				<input type="text" id="emailid" name="email" placeholder="Enter your email ID"><br />
-				 <label for="number" style="color:#FFFFFF;">Contact Number</label><br />
-				<input type="integer" id="cnumber" name="number" placeholder="Enter your number"><br />
-
-				<input type="radio" name="sex" value="male" /> Male<br />
-				<input type="radio" name="sex" value="female" /> Female<br />
-				<input type="radio" name="sex" value="other" /> Others<br />
-
-				 <label for="password" style="color:#FFFFFF;">Create password</label><br />
-				<input type="Password" id="pass" name="password" placeholder="Enter your password"><br />
-			  <label for="Confirm password" style="color:#FFFFFF;">Confirm password</label><br />
-			  <input type="Password" id="pass1" name="password1" placeholder="Re-Enter your password"><br />
-			  <input type="Reset">
-
-				<button onclick="VerifyCredentials1()" id="signup">SignUp</button>
-				   </form>
-			  </article>
+            <div class="form_wrapper">
+				<div class="form_container">
+					<div class="title_container">
+						<h2 style="color:black">Responsive Registration Form</h2>
+					</div>
+				<div class="row clearfix">
+				
+				<form>
+					<div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+					<input type="email" name="email" placeholder="University Email Id" required />
+					</div>
+					<div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+					<input type="password" name="password" placeholder="Password" required />
+					  </div>
+					  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+						<input type="password" name="password" placeholder="Re-type Password" required />
+					  </div>
+					  <div class="row clearfix">
+						<div class="col_half">
+						  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+							<input type="text" name="name" placeholder="First Name" />
+						  </div>
+						</div>
+						<div class="col_half">
+						  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+							<input type="text" name="name" placeholder="Last Name" required />
+						  </div>
+						</div>
+					  </div>
+							<div class="input_field radio_option">
+						  <input type="radio" name="radiogroup1" id="rd1">
+						  <label for="rd1">Male</label>
+						  <input type="radio" name="radiogroup1" id="rd2">
+						  <label for="rd2">Female</label>
+						  </div>
+						  
+							<div class="select_arrow"></div>
+						  </div>
+						<div class="input_field checkbox_option">
+							<input type="checkbox" id="cb1">
+							<label for="cb1">I agree with terms and conditions</label>
+						</div>
+					  <input class="button" type="submit" value="Register" />
+					</form>
+				  </div>
+				</div>
+			  </div>
+			</div>
         </div>
         </div>
       </div>
