@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- -----------------------------------------------------------------------Password Check----------------------------------------------------------- -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------Credentials Check----------------------------------------------------------- -->
 
 <script type="text/javascript">
       function VerifyCredentials1(){
@@ -42,20 +46,115 @@
         {
           alert("First Name can only be text!")
         }
-      } 
+      }
 </script>
 
 
-<!-----------------------------------------------------------------------------------Signup Css---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------LOGIN CSS------------------------------------------------------------------------------------->
+
+
 
 <style>
+*{
+  -ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
 
 
+.login{
+  position: relative;
+  top: 50%;
+	width: 250px;
+  display: table;
+  margin: -60px auto 0 auto;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.legend{
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #8d99af;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 4px;
+
+  &:after{
+    content: "";
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: 152px -16px;
+    opacity: 0.06;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.input{
+  position: relative;
+  width: 90%;
+  margin: 15px auto;
+
+  span{
+    position: absolute;
+    display: block;
+    color: darken(#EDEDED, 10%);
+    left: 10px;
+    top: 8px;
+    font-size: 20px;
+  }
+
+  input{
+    width: 100%;
+    padding: 10px 5px 10px 40px;
+    display: block;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+    transition: 0.2s ease-out;
+    color: darken(#EDEDED, 30%);
+
+    &:focus{
+      padding: 10px 5px 10px 10px;
+      outline: 0;
+      border-color: #8d99af;
+    }
+  }
+}
+
+.submit{
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto -15px auto;
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #8d99af;
+  color: #8d99af;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #fff;
+  transition: 0.2s ease-out;
+
+  &:hover, &:focus{
+    background: #8d99af;
+    color: #fff;
+    outline: 0;
+  }
+}
 
 </style>
-
-
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 
 
   <head>
@@ -113,8 +212,8 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <a href="index.html" style="color:#FFFFFF;">Home</a>  
-            </ul>        
+              <a href="index.html" style="color:#FFFFFF;">Home</a>
+            </ul>
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -127,71 +226,67 @@
   <!-- ***** Header Area End ***** -->
 
 
-<!-- -----------------------------------------------------------------------------------SignUp Bar----------------------------------------------------------- -->
+<!-- -----------------------------------------------------------------------------------Login Bar----------------------------------------------------------- -->
 
 
-
-  <div class="main-banner">
+	<div class="main-banner">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="top-text header-text">
-            <div class="form_wrapper">
-				<div class="form_container">
-					<div class="title_container">
-						<h2 style="color:black">Responsive Registration Form</h2>
-					</div>
-				<div class="row clearfix">
-				
-				<form>
-					<div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-					<input type="email" name="email" placeholder="University Email Id" required />
-					</div>
-					<div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-					<input type="password" name="password" placeholder="Password" required />
-					  </div>
-					  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-						<input type="password" name="password" placeholder="Re-type Password" required />
-					  </div>
-					  <div class="row clearfix">
-						<div class="col_half">
-						  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-							<input type="text" name="name" placeholder="First Name" />
-						  </div>
-						</div>
-						<div class="col_half">
-						  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-							<input type="text" name="name" placeholder="Last Name" required />
-						  </div>
-						</div>
-					  </div>
-							<div class="input_field radio_option">
-						  <input type="radio" name="radiogroup1" id="rd1">
-						  <label for="rd1">Male</label>
-						  <input type="radio" name="radiogroup1" id="rd2">
-						  <label for="rd2">Female</label>
-						  </div>
-						  
-							<div class="select_arrow"></div>
-						  </div>
-						<div class="input_field checkbox_option">
-							<input type="checkbox" id="cb1">
-							<label for="cb1">I agree with terms and conditions</label>
-						</div>
-					  <input class="button" type="submit" value="Register" />
-					</form>
-				  </div>
-				</div>
-			  </div>
+            <article>
+			<form class="login">
+			<fieldset>
+			<legend class="legend" style="color:white"35>Sign Up!!!</legend>
+
+			<div class="input">
+			     <input type="email" id="name" name="userid" placeholder="University Email Id" required>
+			     <span><i class="fa fa-envelope-o"></i></span>
 			</div>
-        </div>
+
+      <div class="input">
+        <input type="password" name="password" placeholder="Password" required />
+        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+			</div>
+
+			<div class="input">
+			     <input type="password" id="pass" name="pwd" placeholder="Re-Type Password" required>
+			     <span><i class="fa fa-lock"></i></span>
+			</div>
+
+      <div class="input">
+        <input type="text" name="name" placeholder="First Name" />
+        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+      </div>
+
+      <div class="input">
+        <input type="text" name="name" placeholder="Last Name" />
+        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+      </div>
+
+      <div class="input">
+        <input type="radio" name="radiogroup1" id="rd1">
+        <label for="rd1">Male</label>
+        <input type="radio" name="radiogroup1" id="rd2">
+        <label for="rd2">Female</label>
+        <input type="radio" name="radiogroup1" id="rd3">
+        <label for="rd3">Others</label>
+      </div>
+
+			<button type="submit" onclick="VerifyCredentials()" id="login" class="submit"><i class="fa fa-long-arrow-right"></i></button>
+			</fieldset>
+			</form>
+			</article>
+      <br><br>
+      <p style="align:center;color:#fff;">Already have an account? <b> <u> <a href="login.html" style="color:#fff">LOGIN</a> </u> </b></p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  
-  <!-- ------------------------------------------------------------------------ Footer------------------------------------------------------------------------------------------ -->
+	</div>
+   </div>
+
+
+  <!-- ------------------------------------------------------------------------ Footer-------------------------------------------------------------------------------------------->
 
 
   <footer>
