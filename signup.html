@@ -12,14 +12,17 @@
       function VerifyCredentials1(){
         var first_name= document.getElementById("fname").value
         var last_name= document.getElementById("lname").value
-
+        var email_id = document.getElementById("ename").value
         var pass_word= document.getElementById("pass").value
         var pass_word1= document.getElementById("pass1").value
 
+		    var mailformat = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
 
-        if(typeof first_name==typeof(text))
+        if(email_id.match(mailformat))
+  			{
+        if(typeof first_name=='string')
         {
-          if(typeof last_name==typeof(text))
+          if(typeof last_name=='string')
           {
               if(pass_word==pass_word1)
               {
@@ -39,6 +42,11 @@
         {
           alert("First Name can only be text!")
         }
+      }
+        else
+          {
+            alert("Wrong email format!")
+          }
       }
 </script>
 
