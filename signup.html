@@ -12,17 +12,15 @@
       function VerifyCredentials1(){
         var first_name= document.getElementById("fname").value
         var last_name= document.getElementById("lname").value
-        var contact_numb= document.getElementById("cnumber").value
+
         var pass_word= document.getElementById("pass").value
         var pass_word1= document.getElementById("pass1").value
 
 
-        if(typeof first_name=='string')
+        if(typeof first_name==typeof(text))
         {
-          if(typeof last_name=='string')
+          if(typeof last_name==typeof(text))
           {
-            if(typeof contact_numb!='integer')
-            {
               if(pass_word==pass_word1)
               {
                 alert("Successfully Signed Up!")
@@ -32,11 +30,6 @@
                 alert("Password does not match!")
               }
             }
-            else
-            {
-              alert("Phone number can not be text or special characters!")
-            }
-          }
           else
           {
             alert("Last name can only be text!")
@@ -166,7 +159,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>S &amp J - Login</title>
+    <title>S&J | SignUp</title>
+    <link rel="icon" href="assets/images/logo.png">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -240,27 +234,27 @@
 			<legend class="legend" style="color:white"35>Sign Up!!!</legend>
 
 			<div class="input">
-			     <input type="email" id="name" name="userid" placeholder="University Email Id" required>
+			     <input type="" id="ename" name="userid" placeholder="University Email Id" required>
 			     <span><i class="fa fa-envelope-o"></i></span>
 			</div>
 
       <div class="input">
-        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="password" id="pass" placeholder="Password" required />
         <span><i aria-hidden="true" class="fa fa-lock"></i></span>
 			</div>
 
 			<div class="input">
-			     <input type="password" id="pass" name="pwd" placeholder="Re-Type Password" required>
+			     <input type="password" id="pass1" name="pwd" placeholder="Re-Type Password" required>
 			     <span><i class="fa fa-lock"></i></span>
 			</div>
 
       <div class="input">
-        <input type="text" name="name" placeholder="First Name" />
+        <input type="text" name="name" id="fname" placeholder="First Name" />
         <span><i aria-hidden="true" class="fa fa-user"></i></span>
       </div>
 
       <div class="input">
-        <input type="text" name="name" placeholder="Last Name" />
+        <input type="text" name="name" id="lname" placeholder="Last Name" />
         <span><i aria-hidden="true" class="fa fa-user"></i></span>
       </div>
 
@@ -273,7 +267,7 @@
         <label for="rd3">Others</label>
       </div>
 
-			<button type="submit" onclick="VerifyCredentials()" id="login" class="submit"><i class="fa fa-long-arrow-right"></i></button>
+			<button type="submit" onclick="VerifyCredentials1()" id="login" class="submit"><i class="fa fa-long-arrow-right"></i></button>
 			</fieldset>
 			</form>
 			</article>
