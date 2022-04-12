@@ -4,45 +4,6 @@
 
 <!-- ------------------------------------------------------------------------------Credentials Check----------------------------------------------------------- -->
 
-<script type="text/javascript">
-      function VerifyCredentials()
-      {
-        var usrname = document.getElementById("name").value;
-        var pwd = document.getElementById("pass").value;
-		    var mailformat = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
-
-        if(usrname>=1940101 && usrname<=1940174)
-        {
-          if(pwd=="passcode")
-          {
-            alert("Login successful");
-          }
-		  else
-		  {
-			alert("Wrong Password");
-		  }
-		}
-        else
-		{
-			if(usrname.match(mailformat))
-			{
-				if(pwd=="passcode")
-				{
-					alert("Login successful");
-				}
-				else
-				{
-					alert("Wrong Password");
-				}
-			}
-			else
-			{
-				alert("Wrong Email id or password:");
-			}
-		}
-
-	  }
-</script>
 
 <!---------------------------------------------------------------------------------LOGIN CSS------------------------------------------------------------------------------------->
 
@@ -160,7 +121,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>S&J | Login</title>
+    <title>S&J | Upload</title>
     <link rel="icon" href="assets/images/logo.png">
 
     <!-- Bootstrap core CSS -->
