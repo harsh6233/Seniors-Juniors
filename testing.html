@@ -2,47 +2,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
+
 <!-- ------------------------------------------------------------------------------Credentials Check----------------------------------------------------------- -->
 
 <script type="text/javascript">
-      function VerifyCredentials()
-      {
-        var usrname = document.getElementById("name").value;
-        var pwd = document.getElementById("pass").value;
+      function VerifyCredentials1(){
+        var first_name= document.getElementById("fname").value;
+        var last_name= document.getElementById("lname").value;
+        var email_id = document.getElementById("ename").value;
+        var pass_word= document.getElementById("pass").value;
+        var pass_word1= document.getElementById("pass1").value;
+
 		    var mailformat = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+        var letters = /^[A-Za-z]+$/;
 
-        if(usrname>=1940101 && usrname<=1940174 && usrname !== null)
+        if(email_id.length == null)//email null validation if
         {
-          if(pwd=="passcode" && pwd!=" ")
-          {
-            alert("Login successful");
-          }
-		  else
-		  {
-			alert("Wrong Password");
-		  }
-		}
-        else
-		{
-			if(usrname.match(mailformat))
-			{
-				if(pwd=="passcode")
-				{
-					alert("Login successful");
-				}
-				else
-				{
-					alert("Wrong Password");
-				}
-			}
-			else
-			{
-				alert("Wrong Email id or password:");
-			}
-		}
+          alert("Email ID cannot be empty");
+          ename.focus();
+        }
 
-	  }
+        else{
+          if (email_id.match(mailformat))
+          {
+            if (first_name == null || last_name == null)
+            {
+              alert("Name cannot be empty");
+            }
+
+            else if(first_name.match(letters) && last_name.match(letters))
+            {
+
+              if (pass_word.length < 6)
+              {
+                alert("Password must be atleast 6 characters");
+                pass.focus();
+              }
+
+              else if(pass_word === pass_word1)
+              {
+                  alert("You are signed up sucessfully!!!");
+              }
+
+              else
+              {
+                alert("Passwords do not match");
+              }
+
+            }
+            else
+            {
+              alert("Names can be alphabets only");
+            }
+
+          }//right mail format if
+
+          else
+          {
+            alert("Wrong Email format");
+            ename.focus();
+          }
+          }
+        }
+
 </script>
+
 
 <!---------------------------------------------------------------------------------LOGIN CSS------------------------------------------------------------------------------------->
 
@@ -160,7 +187,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>S&J | Login</title>
+    <title>S&J | SignUp</title>
     <link rel="icon" href="assets/images/logo.png">
 
     <!-- Bootstrap core CSS -->
@@ -191,7 +218,7 @@
 
 
 
-<!-- ---------------------------------------------------------------------------------Header--------------------------------------------------------------- -->
+<!-----------------------------------------------------------------------------------Header----------------------------------------------------------------->
 
 
   <!-- ***** Header Area Start ***** -->
@@ -209,7 +236,7 @@
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="course.html">Courses</a></li>
-			        <li><a href="signup.html">Sign Up</a></li>
+			        <li><a href="login.html">Login</a></li>
               <li><a href="index.html">Contact Us</a></li>
               <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Upload Material </a></div></li>
             </ul>
@@ -236,21 +263,48 @@
             <article>
 			<form class="login">
 			<fieldset>
-			<legend class="legend" style="color:white"35>Credentials Please!</legend>
+			<legend class="legend" style="color:white"35>Join us!!!</legend>
+
 			<div class="input">
-			<input type="" id="name" name="userid" placeholder="Email" required>
-			 <span><i class="fa fa-envelope-o"></i></span>
+			     <input type="" id="ename" name="userid" placeholder="University Email Id" required />
+			     <span><i class="fa fa-envelope-o"></i></span>
 			</div>
+
+      <div class="input">
+        <input type="password" name="password" id="pass" placeholder="Password" required />
+        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+			</div>
+
 			<div class="input">
-			<input type="password" id="pass" name="pwd" placeholder="Password" required>
-			<span><i class="fa fa-lock"></i></span>
+			     <input type="password" id="pass1" name="pwd" placeholder="Re-Type Password" required />
+			     <span><i class="fa fa-lock"></i></span>
 			</div>
-			<button type="submit" onclick="VerifyCredentials()" id="login" class="submit"><i class="fa fa-long-arrow-right"></i></button>
+
+      <div class="input">
+        <input type="text" name="name" id="fname" placeholder="First Name" required />
+        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+      </div>
+
+      <div class="input">
+        <input type="text" name="name" id="lname" placeholder="Last Name" required />
+        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+      </div>
+
+      <div class="input">
+        <input type="radio" name="radiogroup1" id="rd1" required />
+        <label for="rd1">Male</label>
+        <input type="radio" name="radiogroup1" id="rd2" required />
+        <label for="rd2">Female</label>
+        <input type="radio" name="radiogroup1" id="rd3" required />
+        <label for="rd3">Others</label>
+      </div>
+
+			<button type="submit" onclick="VerifyCredentials1()" id="login" class="submit"><i class="fa fa-long-arrow-right"></i></button>
 			</fieldset>
 			</form>
 			</article>
       <br><br>
-      <p style="align:center;color:#fff;">Don't have an account? <b> <u> <a href="signup.html" style="color:#fff">SIGNUP</a> </u> </b></p>
+      <p style="align:center;color:#fff;">Already have an account? <b> <u> <a href="login.html" style="color:#fff">LOGIN</a> </u> </b></p>
           </div>
         </div>
       </div>

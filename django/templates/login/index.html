@@ -5,6 +5,10 @@
 
   <head>
 
+    {%load assets%}
+    <!-- CSS CUSTOM -->
+    <link rel=”stylesheet” href=”{% assets ‘css/styles.css’ %}”>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -16,13 +20,13 @@
     <link rel="icon" href="assets/images/logo.png">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="% assets vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% assets 'assets/css/fontawesome.css'%}">
+    <link rel="stylesheet" href="{% assets 'assets/css/templatemo-plot-listing.css'%}">
+    <link rel="stylesheet" href="{% assets 'assets/css/animated.css'%}">
+    <link rel="stylesheet" href="{% assets 'assets/css/owl.css'%}">
 
   </head>
 
@@ -60,7 +64,7 @@
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="course.html">Courses</a></li>
-			        <li><a href="login.html">Login</a></li>
+			        <li><a href="/login">Login</a></li>
               <li><a href="index.html">Contact Us</a></li>
               <li><div class="main-white-button"><a href="upload.html"><i class="fa fa-plus"></i> Upload Material </a></div></li>
             </ul>
